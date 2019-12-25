@@ -30,10 +30,11 @@ while vid.isOpened():
             continue
 
         cv2.rectangle(frame1, (x, y), (x+w, y+h), (0, 255, 0), 2)
-        cv2.imwrite("./output/frame%d.jpg" % count, frame1)
+        #cv2.imwrite("./output/frame%d.jpg" % count, frame1)
         count+=1
         cv2.putText(frame1, "Status: {}".format('Movement'), (10, 20), cv2.FONT_HERSHEY_SIMPLEX,
                     1, (0, 0, 255), 3)
+    
 
     image = cv2.resize(frame1, (1080,720))
     out.write(image)
